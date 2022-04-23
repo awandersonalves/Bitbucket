@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "6Tl+z7+MDZscbjspWHEd/eRcYEOc6qqi34wjwEMklbhdbP9vYp4zQOlAtKXLGsl8gDn0CdcEogHUsjeitCOwxA==",
+  "dgSpecHash": "MWRh5GGzK/XL13hCURv6zbpIe9l1237Fr2OJ12WhoHfnc/oUhtnVzFlgIjrd2JexSOGpDGEp5TPm0MQIphMghA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Elli0t\\source\\repos\\Bitbucket\\Bitbucket\\BitbucketConsumer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Elli0t\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Elli0t\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

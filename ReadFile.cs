@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.Configuration;
 
 namespace BitbucketConsumer
 {
@@ -17,20 +18,53 @@ namespace BitbucketConsumer
                 string users;
                 WebResponse webResponse;
                 List<WebResponse> responseList = new List<WebResponse>();
-                
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
 
                 string filePath = "C:/Users/Elli0t/source/repos/Bitbucket/Bitbucket/Users.txt";
                 users = GetFile(filePath);
                 users = users.Replace("\r\n", ",");
-                string[] userRequest = users.Split(',');                
+                string[] userRequest = users.Split(',');
 
                 foreach (string userName in userRequest)
                 {
-                    webResponse = GetRequest(userName);
-                    responseList.Add(webResponse);
+                    if (config.AppSettings.Settings["LastRunTime"] != null)
+                    {
+                        if (DateTime.Now - DateTime.Parse(config.AppSettings.Settings["LastRunTime"].Value) >= TimeSpan.FromMilliseconds(60000))
+                        {
+                            webResponse = GetRequest(userName);
+                            responseList.Add(webResponse);
+                            SaveResponse(webResponse);
+                            Thread.Sleep(5000);
+                        }
+                        else
+                        {
+                            throw new Exception("Time not exceeding 60 seconds");
+                        }
+                    }
+                    else
+                    {
+                        webResponse = GetRequest(userName);
+                        responseList.Add(webResponse);
+                        SaveResponse(webResponse);
+                        Thread.Sleep(5000);
+                    }
+                }                
 
-                    SaveResponse(webResponse);                    
+                if (config.AppSettings.Settings["LastRunTime"] == null)
+                {
+                    config.AppSettings.Settings.Add("LastRunTime", DateTime.UtcNow.ToString());
                 }
+                else
+                {
+                    config.AppSettings.Settings["LastRunTime"].Value = DateTime.UtcNow.ToString();
+                }
+                config.Save();
+
+                Console.WriteLine("To exit the application, press any key");
+                Console.ReadKey(true);
+                Thread.Sleep(5000);
+                Environment.Exit(0);
             }
             catch (Exception e)
             {
