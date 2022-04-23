@@ -17,6 +17,7 @@ namespace BitbucketConsumer
                 string users;
                 WebResponse webResponse;
                 List<WebResponse> responseList = new List<WebResponse>();
+                
 
                 string filePath = "C:/Users/Elli0t/source/repos/Bitbucket/Bitbucket/Users.txt";
                 users = GetFile(filePath);
@@ -27,6 +28,8 @@ namespace BitbucketConsumer
                 {
                     webResponse = GetRequest(userName);
                     responseList.Add(webResponse);
+
+                    SaveResponse(webResponse);                    
                 }
             }
             catch (Exception e)
@@ -62,6 +65,22 @@ namespace BitbucketConsumer
             webRequest.Method = "GET";
 
             return webRequest.GetResponse();
+        }
+
+        public static void SaveResponse(WebResponse webResponse)
+        {
+            string responseString;
+            using (Stream stream = webResponse.GetResponseStream())
+            {
+                StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                responseString = reader.ReadToEnd();
+            }
+            string filePath = "C:/Users/Elli0t/source/repos/Bitbucket/Bitbucket/Response.txt";
+
+            StreamWriter streamWriter = new StreamWriter(filePath);
+
+            streamWriter.WriteLine(responseString);
+
         }
     }
 }
