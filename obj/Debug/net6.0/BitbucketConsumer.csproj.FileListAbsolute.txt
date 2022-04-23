@@ -1,0 +1,15 @@
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\bin\Debug\net6.0\BitbucketConsumer.exe
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\bin\Debug\net6.0\BitbucketConsumer.deps.json
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\bin\Debug\net6.0\BitbucketConsumer.runtimeconfig.json
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\bin\Debug\net6.0\BitbucketConsumer.dll
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\bin\Debug\net6.0\BitbucketConsumer.pdb
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.csproj.AssemblyReference.cache
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.AssemblyInfoInputs.cache
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.AssemblyInfo.cs
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.csproj.CoreCompileInputs.cache
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.dll
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\refint\BitbucketConsumer.dll
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.pdb
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\BitbucketConsumer.genruntimeconfig.cache
+C:\Users\Elli0t\source\repos\Bitbucket\Bitbucket\obj\Debug\net6.0\ref\BitbucketConsumer.dll
